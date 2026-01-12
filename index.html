@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Laporan Keuangan RT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Laporan Keuangan RT</h1>
+
+    <form id="formKeuangan">
+        <input type="date" id="tanggal" required>
+        <select id="jenis" required>
+            <option value="">Pilih Jenis</option>
+            <option value="masuk">Pemasukan</option>
+            <option value="keluar">Pengeluaran</option>
+        </select>
+        <input type="number" id="jumlah" placeholder="Jumlah (Rp)" required>
+        <input type="text" id="keterangan" placeholder="Keterangan" required>
+        <button type="submit">Simpan</button>
+    </form>
+
+    <h2>Data Keuangan</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Tanggal</th>
+                <th>Jenis</th>
+                <th>Jumlah</th>
+                <th>Keterangan</th>
+            </tr>
+        </thead>
+        <tbody id="tabelData"></tbody>
+    </table>
+
+    <h3 id="saldo">Saldo: Rp 0</h3>
+
+    <script src="script.js"></script>
+</body>
+</html>
