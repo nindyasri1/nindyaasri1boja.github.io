@@ -6,7 +6,7 @@ function simpanKeGoogle() {
         keterangan: document.getElementById("keterangan").value
     };
 
-    fetch("https://script.google.com/macros/s/AKfycbwNobuWZm4D9qGlc1jD13_WNw6QFxrj423Q3eu21CdcwAzhTibDIKv4Ea8aJRxhD4nL/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbwwDDgdgpD2OUw4pswgE-rfoxW_o6VrhIFjwMWTkaIyaV_jlXvYxT8u-zkpgVfJrOXS/exec", {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
@@ -22,4 +22,5 @@ function simpanKeGoogle() {
         console.error(err);
     });
 }
+
 
