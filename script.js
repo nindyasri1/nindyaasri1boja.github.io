@@ -42,3 +42,28 @@ function tampilkanData() {
 }
 
 tampilkanData();
+function simpanKeGoogle() {
+    const data = {
+        tanggal: document.getElementById("tanggal").value,
+        jenis: document.getElementById("jenis").value,
+        jumlah: document.getElementById("jumlah").value,
+        keterangan: document.getElementById("keterangan").value
+    };
+
+    fetch("URL_WEB_APP_GOOGLE_SCRIPT", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then(res => res.json())
+    .then(res => {
+        alert("Data berhasil disimpan ke Google Spreadsheet");
+    })
+    .catch(err => {
+        alert("Gagal menyimpan data");
+        console.error(err);
+    });
+}
+
